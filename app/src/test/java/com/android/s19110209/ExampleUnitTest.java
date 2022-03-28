@@ -52,8 +52,8 @@ public class ExampleUnitTest {
     //SUB
     @Test
     public void subTwoNumbers() {
-        double resultSub = mCalculator.sub(1d, 1d);
-        assertThat(resultSub, is(equalTo(0d)));
+        double resultSub = mCalculator.sub(2d, 1d);
+        assertThat(resultSub, is(equalTo(1d)));
     }
     @Test
     public void subWorksWithNegativeResult() {
