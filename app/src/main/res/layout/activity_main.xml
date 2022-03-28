@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/operand_one_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số thứ nhất"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <EditText
+        android:id="@+id/operand_two_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số thứ hai"
+        android:inputType="numberDecimal|numberSigned"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/operation_add_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="onAdd"
+            android:text="Cộng" />
+
+        <Button
+            android:id="@+id/operation_sub_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_add_btn"
+            android:layout_toRightOf="@id/operation_add_btn"
+            android:onClick="onSub"
+            android:text="Trừ" />
+
+        <Button
+            android:onClick="onDiv"
+            android:id="@+id/operation_div_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_add_btn"
+            android:text="Chia"
+            />
+
+        <Button
+            android:onClick="onMul"
+            android:id="@+id/operation_mul_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_add_btn"
+            android:layout_toEndOf="@id/operation_add_btn"
+            android:layout_toRightOf="@id/operation_add_btn"
+            android:text="Nhân"
+            />
+
+        <Button
+            android:onClick="onPow"
+            android:id="@+id/operation_pow_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_sub_btn"
+            android:layout_toRightOf="@id/operation_sub_btn"
+            android:text="Mũ"
+            />
+
+        <Button
+            android:onClick="onFact"
+            android:id="@+id/operation_fact_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_sub_btn"
+            android:layout_toEndOf="@id/operation_sub_btn"
+            android:layout_toRightOf="@id/operation_sub_btn"
+            android:text="Giai thừa"
+            />
+
+        <Button
+            android:id="@+id/operation_log_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_pow_btn"
+            android:layout_toRightOf="@id/operation_pow_btn"
+            android:onClick="onLog"
+            android:text="Log" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/label_result_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:text="Kết quả: "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/operation_result_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
